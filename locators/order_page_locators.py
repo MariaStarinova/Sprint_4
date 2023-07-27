@@ -1,0 +1,22 @@
+from selenium.webdriver.common.by import By
+
+class OrderPageLocators:
+    HEADER_ORDER_PAGE = By.XPATH, ".//div[text() = 'Для кого самокат']"
+    FIRST_NAME_INPUT = By.XPATH, ".//input[@placeholder='* Имя']"
+    LAST_NAME_INPUT = By.XPATH, ".//input[@placeholder='* Фамилия']"
+    ADDRESS_INPUT = By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']"
+    METRO_STATION_INPUT = By.XPATH, ".//input[@placeholder='* Станция метро']"
+    METRO_STATION_CLICK = By.XPATH, ".//button[@value = '13']"
+    PHONE_NUMBER_INPUT = By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']"
+    NEXT_BUTTON = By.XPATH, ".//button[text()='Далее']"
+    HEADER_ABOUT_RENT = By.XPATH, ".//div[text() = 'Про аренду']"
+    DELIVERY_DATE_INPUT = By.XPATH, ".//input[@placeholder='* Когда привезти самокат']"
+    CHOICE_DATE_CALENDAR = By.XPATH, ".//div[contains(@class, 'react-datepicker__day--today')]"
+    RENT_PERIOD = By.XPATH, ".//div[contains(@class, 'Dropdown-control')]"
+    CHOICE_RENT_PERIOD = By.XPATH, ".//div[text() = 'трое суток']"
+    CHOICE_COLOR = By.XPATH, ".//label[@for='black']"
+    COMMENT_FOR_COURIER = By.XPATH, ".//input[@placeholder='Комментарий для курьера']"
+    ORDER_BUTTON = By.XPATH, ".//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать']"
+    HEADER_CONFIRMATION_ORDER_MODAL_WINDOW = By.XPATH, ".//div[text() = 'Хотите оформить заказ?']"
+    YES_ORDER_BUTTON_MODAL = By.XPATH, ".//button[text()='Да']"
+    VIEW_STATUS_BUTTON_IN_MODAL_WINDOW = By.XPATH, ".//button[text()='Посмотреть статус']"
