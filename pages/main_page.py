@@ -41,23 +41,14 @@ class MainPage(BasePage):
 
     #@allure.step('Скролл до кнопки "Заказать" в body')
     def scroll_to_order_body_button(self):
-        # self.get_cookie()
         self.scroll_to_element(MainPaigeLocators.BODY_ORDER_BUTTON)
         self.find_wait_location_element(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # self.wait_element_click(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # self.click_element(MainPaigeLocators.BODY_ORDER_BUTTON)
 
     #@allure.step('Кликнуть по кнопке "Заказать" в body')
     def click_to_order_body_button(self):
         self.scroll_to_order_body_button()
+        self.wait_element_click(MainPaigeLocators.BODY_ORDER_BUTTON)
         self.click_element(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # # self.scroll_to_order_body_button()
-        # # self.click_element(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # # self.find_wait_location_element(OrderPageLocators.HEADER_ORDER_PAGE)
-        # self.get_cookie()
-        # self.scroll_to_element(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # self.find_wait_location_element(MainPaigeLocators.BODY_ORDER_BUTTON)
-        # # self.wait_element_click(MainPaigeLocators.BODY_ORDER_BUTTON)
 
     #@allure.step('Cкролл до блока вопросов')
     def scroll_question_path(self):
