@@ -22,7 +22,7 @@ class TestMainPage:
         main_page.click_yandex_logo()
         assert driver.current_url == TestUrls.DzenMainUrl, 'URL-адрес перенаправленной страницы не соответствует ожидаемому результату'
 
-    # # @allure.title('Проверка при клике на логотип "Самокат" остаемся на главной странице')
+    # #  @allure.title('Проверка при клике на логотип "Самокат" остаемся на главной странице')
     # # @allure.description('На странице нажать на логотип "Самокат" в хедере на главной странице')
     def test_click_scooter_in_header(self, driver):
         main_page = MainPage(driver)
@@ -37,14 +37,14 @@ class TestMainPage:
         main_page.main_url()
         main_page.click_header_order_button()
         assert driver.current_url == TestUrls.OrderPageUrl, 'URL-адрес не соответствует ожидаемому результату'
-
-    # @allure.title('Проверка перехода на страницу оформления заказа при клике на "Заказать" в body')
-    # @allure.description('Нажать на кнопку "Заказать" в body, и происходит переход на страницу заказа')
-    # def test_click_body_order_button(self, driver):
-    #     main_page = MainPage(driver)
-    #     main_page.main_url()
-    #     main_page.get_cookie()
-    #     main_page.click_to_order_body_button()
-    #     assert driver.current_url == TestUrls.OrderPageUrl, 'URL-адрес не соответствует ожидаемому результату'
+    #
+    # # @allure.title('Проверка перехода на страницу оформления заказа при клике на "Заказать" в body')
+    # # @allure.description('Нажать на кнопку "Заказать" в body, и происходит переход на страницу заказа')
+    # # def test_click_body_order_button(self, driver):
+    # #     main_page = MainPage(driver)
+    # #     main_page.main_url()
+    # #     main_page.get_cookie()
+    # #     main_page.click_to_order_body_button()
+    # #     assert driver.current_url == TestUrls.OrderPageUrl, 'URL-адрес не соответствует ожидаемому результату'
 
 
