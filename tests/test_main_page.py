@@ -46,4 +46,3 @@ class TestMainPage:
         main_page.get_cookie()
         main_page.click_to_order_body_button()
         assert driver.current_url == TestUrls.OrderPageUrl, 'URL-адрес не соответствует ожидаемому результату'
-

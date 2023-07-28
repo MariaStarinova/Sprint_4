@@ -17,4 +17,3 @@ class TestQuestions:
         main_page.click_on_question(index)
         answer = main_page.get_answers()
         assert answer == Answers.answers[index], 'Получен некорректный текст ответа'
-
