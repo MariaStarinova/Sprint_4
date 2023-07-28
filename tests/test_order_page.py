@@ -9,7 +9,7 @@ from conftest import driver
 class TestOrderPage:
     # @allure.title('Проверка оформления заказа через кнопку "Заказать" в хедере]')
     # @allure.description('Нажать на кнопку "Заказать" в хедере и оформить заказ)
-    def test_order_header_order_button(self, driver):
+    # def test_order_header_order_button(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
         main_page.main_url()
@@ -19,3 +19,14 @@ class TestOrderPage:
         order_page.open_about_rent_page()
         assert order_page.find_text(OrderPageLocators.VIEW_STATUS_BUTTON_IN_MODAL_WINDOW) == ExpectedText.look_status, 'Нет подтверждения, что заказ оформлен'
 
+    # @allure.title('Проверка оформления заказа через кнопку "Заказать" в body')
+    # @allure.description('Нажать на кнопку "Заказать" в хедере и оформить заказ')
+    def test_order_body_order_button(self, driver):
+        main_page = MainPage(driver)
+        order_page = OrderPage(driver)
+        main_page.main_url()
+        main_page.get_cookie()
+        main_page.click_to_order_body_button()
+        order_page.open_who_is_scooter_for_page()
+        order_page.open_about_rent_page()
+        assert order_page.find_text(OrderPageLocators.VIEW_STATUS_BUTTON_IN_MODAL_WINDOW) == ExpectedText.look_status, 'Нет подтверждения, что заказ оформлен'
