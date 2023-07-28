@@ -31,7 +31,7 @@ class BasePage:
     def wait_element_click(self, element, time=10):
         return WebDriverWait(self.driver, time).until(EC.element_to_be_clickable(element))
 
-    def wait_visibility_element(self, element):
+    def wait_visibility_element(self, element, time=10):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(element))
 
     def cross_new_window(self):
@@ -42,3 +42,6 @@ class BasePage:
 
     def wait_url_to_be(self, page_url):
         WebDriverWait(self.driver, 10).until(EC.url_to_be(page_url))
+
+    def find_elements_located(self, element, time=10):
+        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(element))

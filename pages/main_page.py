@@ -57,7 +57,7 @@ class MainPage(BasePage):
     #@allure.step('Кликнуть на вопрос в аккордеоне')
     def click_on_question(self, index):
         self.wait_visibility_element(MainPaigeLocators.QUESTION_PATH)
-        questions = self.find_element(MainPaigeLocators.QUESTION_LOCATOR)
+        questions = self.find_elements_located(MainPaigeLocators.QUESTION_LOCATOR)
         questions[index].click()
 
     #@allure.step('Получить ответ на вопрос')

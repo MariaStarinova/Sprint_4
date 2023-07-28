@@ -8,8 +8,8 @@ from conftest import driver
 # @allure.feature('Действия на странице оформления заказа')
 class TestOrderPage:
     # @allure.title('Проверка оформления заказа через кнопку "Заказать" в хедере]')
-    # @allure.description('Нажать на кнопку "Заказать" в хедере и оформить заказ)
-    # def test_order_header_order_button(self, driver):
+    # @allure.description('Нажать на кнопку "Заказать" в хедере и оформить заказ')
+    def test_order_header_order_button(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
         main_page.main_url()
