@@ -17,3 +17,4 @@ class TestOrderPage:
     #     order_page.open_who_is_scooter_for_page()
     #     order_page.open_page_order()
     #     assert order_page.find_text(OrderPageLocators.VIEW_STATUS_BUTTON_IN_MODAL_WINDOW) == ExpectedText.heading_look_at_status, 'Нет подтверждения, что заказ оформлен'
+
