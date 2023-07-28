@@ -15,3 +15,7 @@ class Answers:
 class TestUrls:
     MainPageUrl = 'https://qa-scooter.praktikum-services.ru/'
     OrderPageUrl = 'https://qa-scooter.praktikum-services.ru/order'
+    DzenMainUrl = 'https://dzen.ru/?yredirect=true'
+
+class ExpectedText:
+    heading_look_at_status = 'Посмотреть статус'

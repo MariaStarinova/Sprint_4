@@ -19,5 +19,5 @@ class GeneratedData:
 
     def generate_phone_number():
         fake = Faker('ru_RU')
-        phone_number = fake.phone_number('+79#########')
+        phone_number = f"+7{str(fake.random_int(900, 999))}{str(fake.random_int(1111111, 9999999))}"
         return phone_number
