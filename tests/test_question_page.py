@@ -1,13 +1,13 @@
-# import allure
+import allure
 import pytest
 from data.data import Answers
 from pages.main_page import MainPage
 from conftest import driver
 
-# @allure.feature('Раздел часто задаваемых вопросы')
+@allure.feature('Раздел часто задаваемых вопросы')
 class TestQuestions:
-    # @allure.title('Проверка списка часто задаваемых вопросов и ответов на главной странице')
-    # @allure.description('Раздел «Вопросы о важном» - при клике на вопрос открывается соответствующий ответ')
+    @allure.title('Проверка списка часто задаваемых вопросов и ответов на главной странице')
+    @allure.description('Раздел «Вопросы о важном» - при клике на вопрос открывается соответствующий ответ')
     @pytest.mark.parametrize("index", range(8))
     def test_click_on_questions(self, driver, index):
         main_page = MainPage(driver)
