@@ -6,7 +6,7 @@ class OrderPageLocators:
     LAST_NAME_INPUT = By.XPATH, ".//input[@placeholder='* Фамилия']"
     ADDRESS_INPUT = By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']"
     METRO_STATION_INPUT = By.XPATH, ".//input[@placeholder='* Станция метро']"
-    METRO_STATION_CLICK = By.XPATH, ".//button[@value = '13']"
+    METRO_STATION_CLICK = By.XPATH, ".//button[@value = '1']"
     PHONE_NUMBER_INPUT = By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']"
     NEXT_BUTTON = By.XPATH, ".//button[text()='Далее']"
     HEADER_ABOUT_RENT = By.XPATH, ".//div[text() = 'Про аренду']"

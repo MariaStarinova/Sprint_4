@@ -18,4 +18,4 @@ class TestUrls:
     DzenMainUrl = 'https://dzen.ru/?yredirect=true'
 
 class ExpectedText:
-    heading_look_at_status = 'Посмотреть статус'
+    look_status = 'Посмотреть статус'

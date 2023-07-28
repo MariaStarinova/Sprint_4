@@ -21,48 +21,47 @@ class OrderPage(BasePage):
 
     # @allure.step('Выбрать станцию метро')
     def choose_metro_station(self):
-        self.click_element(*OrderPageLocators.METRO_STATION_INPUT).click()
-        self.click_element(*OrderPageLocators.METRO_STATION_CLICK).click()
+        self.click_element(OrderPageLocators.METRO_STATION_INPUT)
+        self.click_element(OrderPageLocators.METRO_STATION_CLICK)
 
     # @allure.step('Нажать на кнопку Далее')
     def click_next_button(self):
-        self.find_element(*OrderPageLocators.NEXT_BUTTON)
-        self.click_element(*OrderPageLocators.NEXT_BUTTON)
+        self.find_element(OrderPageLocators.NEXT_BUTTON)
+        self.click_element(OrderPageLocators.NEXT_BUTTON)
 
     # @allure.step('Выбрать дату "Когда привезти самокат?"')
-    def choose_date(self, date):
-        self.click_element(*OrderPageLocators.DELIVERY_DATE_INPUT)
-        self.click_element(*OrderPageLocators.CHOICE_DATE_CALENDAR)
+    def choose_date(self):
+        self.click_element(OrderPageLocators.DELIVERY_DATE_INPUT)
+        self.click_element(OrderPageLocators.CHOICE_DATE_CALENDAR)
 
     # @allure.step('Выбрать срок аренды')
     def choose_rent_period(self):
-        self.click_element(*OrderPageLocators.RENT_PERIOD)
-        self.click_element(*OrderPageLocators.CHOICE_RENT_PERIOD)
+        self.click_element(OrderPageLocators.RENT_PERIOD)
+        self.click_element(OrderPageLocators.CHOICE_RENT_PERIOD)
 
     # @allure.step('Выбрать цвет самоката')
     def choose_color(self):
-        self.click_element(*OrderPageLocators.CHOICE_COLOR)
+        self.click_element(OrderPageLocators.CHOICE_COLOR)
 
     # @allure.step('Кликнуть на кнопку "Заказать"')
     def click_order_button(self):
-        self.click_element(*OrderPageLocators.ORDER_BUTTON)
+        self.click_element(OrderPageLocators.ORDER_BUTTON)
 
     # @allure.step('Подтвердить заказ')
     def confirm_order(self):
-        self.click_element(*OrderPageLocators.YES_ORDER_BUTTON_MODAL)
+        self.click_element(OrderPageLocators.YES_ORDER_BUTTON_MODAL)
 
- # @allure.step('Открыть страницу "Для кого самокат"')
+ # @allure.step('Открыть страницу "Для кого самокат" и заполнить данными для заказа')
     def open_who_is_scooter_for_page(self):
-        self.open_page_order()
         self.enter_info()
         self.choose_metro_station()
         self.click_next_button()
 
-# @allure.step('Открыть страницу "Про аренду"')
+# @allure.step('Открыть страницу "Про аренду" и заполнить данными для заказа')
     def open_about_rent_page(self):
         self.choose_date()
         self.choose_rent_period()
         self.choose_color()
         self.click_element(OrderPageLocators.ORDER_BUTTON)
         self.find_wait_location_element(OrderPageLocators.YES_ORDER_BUTTON_MODAL)
-
+        self.confirm_order()
